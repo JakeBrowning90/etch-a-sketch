@@ -44,12 +44,64 @@ body {
    flex: 1 1 auto;
 }
 
-.inked {
+.inkRed {
+    background: red; 
+    border-color: red;  
+}
+
+.inkOrange{
+    background: orange; 
+    border-color: orange;  
+}
+
+.inkYellow {
+    background: yellow; 
+    border-color: yellow;  
+}
+
+.inkGreen {
+    background: green; 
+    border-color: green;  
+}
+
+.inkBlue {
+    background: blue; 
+    border-color: blue;  
+}
+
+.inkIndigo {
+    background: indigo; 
+    border-color: indigo;  
+}
+
+.inkViolet {
+    background: purple; 
+    border-color: purple;  
+}
+
+.inkPink {
+    background: pink; 
+    border-color: pink;  
+}
+
+.inkBrown {
+    background: brown; 
+    border-color: brown;  
+}
+
+.inkBlack {
     background: black; 
     border-color: black; 
-    border-style: solid;
-    border-width: 1px;
-    
+}
+
+.inkWhite {
+    background: white; 
+    border-color: white;  
+}
+
+.inkGrey {
+    background: grey; 
+    border-color: grey;  
 }
 
 .pixel:hover {

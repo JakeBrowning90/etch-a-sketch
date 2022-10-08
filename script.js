@@ -40,15 +40,18 @@ function drawGrid(canvasSize) {
 
 canvas.addEventListener('mousedown', function (e) {
     if(e.target.classList.contains("pixel")) {
-        e.target.classList.add("inked");
-        isDrawing = true;
+        //e.target.classList.add("inkBlack");
+        colour = getColour();
+        e.target.classList.add(`ink${colour}`);
+        isDrawing = true; 
     }
   });
 
   canvas.addEventListener('mousemove', function (e) {
     if (isDrawing) {
         if(e.target.classList.contains("pixel")) {
-            e.target.classList.add("inked");
+            getColour()
+            e.target.classList.add(`ink${colour}`);
         }
     }   
   });
@@ -59,3 +62,42 @@ canvas.addEventListener('mousedown', function (e) {
     }   
   });
 
+  function getColour() {
+    colourChoice = document.querySelector('input[name="colourChoice"]:checked').value;
+    if (colourChoice == "red") { 
+        return "Red";
+    }
+    else if (colourChoice == "orange") {
+        return "Orange";
+    }
+    else if (colourChoice == "yellow") {
+        return "Yellow";
+    }
+    else if (colourChoice == "green") {
+        return "Green";
+    }
+    else if (colourChoice == "blue") {
+        return "Blue";
+    }
+    else if (colourChoice == "indigo") {
+        return "Indigo";
+    }
+    else if (colourChoice == "violet") {
+        return "Violet";
+    }
+    else if (colourChoice == "pink") {
+        return "Pink";
+    }
+    else if (colourChoice == "brown") {
+        return "Brown";
+    }
+    else if (colourChoice == "black") {
+        return "Black";
+    }
+    else if (colourChoice == "white") {
+        return "White";
+    }
+    else if (colourChoice == "grey") {
+        return "Grey";
+    }
+  }
