@@ -1,11 +1,16 @@
+html, body {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: stretch;
+    justify-content: space-between;
+    flex: auto;
+    margin: 0;
     background-color: #f5efe6;
-}
-
-h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -19,7 +24,7 @@ h1 {
     margin: 0 10px;
     border-style: ridge;
     border-width: 20px;
-    border-color: brown;
+    border-color: #954520;
 }
 
 .canvasRow {
@@ -33,17 +38,18 @@ h1 {
 
 .pixel {
    background: white; 
+   border-color: lightgrey; 
    border-style: solid;
    border-width: 1px;
-   border-color: grey; 
    flex: 1 1 auto;
 }
 
-.colored {
+.inked {
     background: black; 
+    border-color: black; 
     border-style: solid;
     border-width: 1px;
-    border-color: grey; 
+    
 }
 
 .pixel:hover {
@@ -51,10 +57,22 @@ h1 {
   }
 
 .palette {
+    max-height: 474px;
     border-style: ridge;
-    border-color: brown;
+    border-color: #954520;
+    padding: 5px;
 }
 
-.workspace{
+.sandwich {
+    width: 100%;
+    color:#f5efe6;
+    background-color: #4f200f;
+    padding: 5px 10px;
+}
+
+.workspace {
+    flex: 1 0 auto;
     display: flex;
+    padding: 0px;
+    margin: 10px;
 }

@@ -40,9 +40,7 @@ function drawGrid(canvasSize) {
 
 canvas.addEventListener('mousedown', function (e) {
     if(e.target.classList.contains("pixel")) {
-        //console.log(e.target);
-        e.target.classList.add("colored");
-        //e.target.style.backgroundColor = 'black';
+        e.target.classList.add("inked");
         isDrawing = true;
     }
   });
@@ -50,9 +48,7 @@ canvas.addEventListener('mousedown', function (e) {
   canvas.addEventListener('mousemove', function (e) {
     if (isDrawing) {
         if(e.target.classList.contains("pixel")) {
-            //console.log(e.target);
-            e.target.classList.add("colored");
-            //e.target.style.backgroundColor = 'black';
+            e.target.classList.add("inked");
         }
     }   
   });
