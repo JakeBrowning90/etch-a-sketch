@@ -40,7 +40,8 @@ function drawGrid(canvasSize) {
 
 canvas.addEventListener('mousedown', function (e) {
     if(e.target.classList.contains("pixel")) {
-        //e.target.classList.add("inkBlack");
+        let currentColour = e.target.classList[1];
+        e.target.classList.remove(currentColour);
         colour = getColour();
         e.target.classList.add(`ink${colour}`);
         isDrawing = true; 
@@ -50,7 +51,9 @@ canvas.addEventListener('mousedown', function (e) {
   canvas.addEventListener('mousemove', function (e) {
     if (isDrawing) {
         if(e.target.classList.contains("pixel")) {
-            getColour()
+            let currentColour = e.target.classList[1];
+            e.target.classList.remove(currentColour);
+            //getColour()
             e.target.classList.add(`ink${colour}`);
         }
     }   
