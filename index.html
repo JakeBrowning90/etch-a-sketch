@@ -13,38 +13,72 @@
     <div class="workspace">
         <div class="palette">
             <h2>Jake's Drawing Pad</h2>
-            <p>Resize your canvas (2 to 100)</p>
-            <input type="number" id="canvasSize" min="2" max="100">
-            <button id="refresh">Refresh</button>
+            <p>Resize and reset canvas</p>
+            <input type="number" id="canvasSize" min="2" max="100" placeholder="2 - 100">
+            <button id="refresh">Reset</button>
             <br>
-            <input type="radio" id="red" name="colourChoice" value="red">
-            <label for="red">Red</label><br>
-            <input type="radio" id="orange" name="colourChoice" value="orange">
-            <label for="orange">Orange</label><br>
-            <input type="radio" id="yellow" name="colourChoice" value="yellow">
-            <label for="yellow">Yellow</label><br>
-            <input type="radio" id="green" name="colourChoice" value="green">
-            <label for="green">Green</label><br>
-            <input type="radio" id="blue" name="colourChoice" value="blue">
-            <label for="blue">Blue</label><br>
-            <input type="radio" id="indigo" name="colourChoice" value="indigo">
-            <label for="indigo">Indigo</label><br>
-            <input type="radio" id="violet" name="colourChoice" value="violet">
-            <label for="violet">Violet</label><br>
-            <input type="radio" id="pink" name="colourChoice" value="pink">
-            <label for="pink">Pink</label><br>
-            <input type="radio" id="brown" name="colourChoice" value="brown">
-            <label for="brown">Brown</label><br>
-            <input type="radio" id="black" name="colourChoice" value="black" checked>
-            <label for="black">Black</label><br>
-            <input type="radio" id="white" name="colourChoice" value="white">
-            <label for="white">White</label><br>
-            <input type="radio" id="grey" name="colourChoice" value="grey">
-            <label for="grey">Grey</label><br><br>
-            <input type="radio" id="random" name="colourChoice" value="random">
-            <label for="random">Random!</label><br><br>
-            <input type="radio" id="eraser" name="colourChoice" value="eraser">
-            <label for="eraser">Erase</label>
+            <div class="palletOption">
+                <div>
+                    <input type="radio" id="red" name="colourChoice" value="Red">
+                    <label for="red">Red</label>
+                </div>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="orange" name="colourChoice" value="Orange">
+                <label for="orange">Orange</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="yellow" name="colourChoice" value="Yellow">
+                <label for="yellow">Yellow</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="green" name="colourChoice" value="Green">
+                <label for="green">Green</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="blue" name="colourChoice" value="Blue">
+                <label for="blue">Blue</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="indigo" name="colourChoice" value="Indigo">
+                <label for="indigo">Indigo</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="violet" name="colourChoice" value="Violet">
+                <label for="violet">Violet</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="pink" name="colourChoice" value="Pink">
+                <label for="pink">Pink</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="brown" name="colourChoice" value="Brown">
+                <label for="brown">Brown</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="black" name="colourChoice" value="Black" checked>
+                <label for="black">Black</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="white" name="colourChoice" value="White">
+                <label for="white">White</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="grey" name="colourChoice" value="Grey">
+                <label for="grey">Grey</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="random" name="colourChoice" value="Random">
+                <label for="random">Random!</label>
+            </div>
+            <div class="palletOption">
+                <input type="radio" id="custom" name="colourChoice" value="Custom">
+                <input type="text" id="hexCode" placeholder="6-digit hex code">
+            </div>
+            <div class="palletOption">   
+                <input type="radio" id="eraser" name="colourChoice" value="None">
+                <label for="eraser">Erase</label>
+            </div>
         </div>
         <div class="canvas"></div>
     </div>
