@@ -25,6 +25,7 @@ body {
     border-style: ridge;
     border-width: 20px;
     border-color: #954520;
+    background-color: white;
 }
 
 .canvasRow {
@@ -37,11 +38,14 @@ body {
 }
 
 .pixel {
-   background: white; 
-   border-color: lightgrey; 
    border-style: solid;
    border-width: 1px;
    flex: 1 1 auto;
+}
+
+.inkNone {
+    background: none; 
+    border-color: lightgrey; 
 }
 
 .inkRed {
@@ -106,6 +110,8 @@ body {
 
 .pixel:hover {
     background-color: #cccaca;
+    padding: 1px;
+    border: 1px;
   }
 
 .palette {

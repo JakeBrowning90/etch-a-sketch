@@ -27,7 +27,7 @@ function drawGrid(canvasSize) {
             canvasRow.classList.add("canvasRow");
             for (j = 0; j < canvasSize; j++) {
                 const pixel = document.createElement("div");
-                pixel.classList.add("pixel");
+                pixel.classList.add("pixel", "inkNone");
                 canvasRow.appendChild(pixel);
             }
             canvas.appendChild(canvasRow);
@@ -42,30 +42,51 @@ canvas.addEventListener('mousedown', function (e) {
     if(e.target.classList.contains("pixel")) {
         let currentColour = e.target.classList[1];
         e.target.classList.remove(currentColour);
+        e.target.style.removeProperty("background-color");
+        e.target.style.removeProperty("border-color");
+
         colour = getColour();
-        e.target.classList.add(`ink${colour}`);
+        if (colour == "Random") {
+            let randomColour = Math.floor(Math.random()*16777215).toString(16);
+            e.target.style.backgroundColor = "#" + randomColour;
+            e.target.style.borderColor = "#" + randomColour;
+        }
+        else {
+            e.target.classList.add(`ink${colour}`);
+        }
         isDrawing = true; 
     }
   });
 
-  canvas.addEventListener('mousemove', function (e) {
+canvas.addEventListener('mousemove', function (e) {
     if (isDrawing) {
         if(e.target.classList.contains("pixel")) {
             let currentColour = e.target.classList[1];
             e.target.classList.remove(currentColour);
+            e.target.style.removeProperty("background-color");
+            e.target.style.removeProperty("border-color");
+
             //getColour()
-            e.target.classList.add(`ink${colour}`);
+            //e.target.classList.add(`ink${colour}`);
+            if (colour == "Random") {
+                let randomColour = Math.floor(Math.random()*16777215).toString(16);
+                e.target.style.backgroundColor = "#" + randomColour;
+                e.target.style.borderColor = "#" + randomColour;
+            }
+            else {
+                e.target.classList.add(`ink${colour}`);
+            }
         }
     }   
   });
 
-  canvas.addEventListener('mouseup', function (e) {
+canvas.addEventListener('mouseup', function (e) {
     if (isDrawing) {
         isDrawing = false;
     }   
   });
 
-  function getColour() {
+function getColour() {
     colourChoice = document.querySelector('input[name="colourChoice"]:checked').value;
     if (colourChoice == "red") { 
         return "Red";
@@ -103,4 +124,10 @@ canvas.addEventListener('mousedown', function (e) {
     else if (colourChoice == "grey") {
         return "Grey";
     }
-  }
+    else if (colourChoice == "eraser") {
+        return "None";
+    }
+    else if (colourChoice == "random") {
+        return "Random";
+    }
+  };
