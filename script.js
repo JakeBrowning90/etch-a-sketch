@@ -60,7 +60,7 @@ function clearGrid(canvas) {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
-}
+} 
 
 function drawGrid(canvasSize) {
     if (canvasSize > 1 && canvasSize < 101) {
