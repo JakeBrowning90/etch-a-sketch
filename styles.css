@@ -18,9 +18,20 @@ p {
     margin: 0;
 }
 
+.workspace {
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    padding: 0px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
 .canvas {
-    width: 450px;
-    height: 450px;
+    /* place-self: center; */
+    width: 75vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -151,9 +162,4 @@ p {
     background-color: red;
 }
 
-.workspace {
-    flex: 1 0 auto;
-    display: flex;
-    padding: 0px;
-    margin: 10px;
-}
+
